@@ -22,16 +22,20 @@
     <h1>Entre em contato para expôr uma situação</h1>
     <form >
         <label for="nome">Nome:</label><br>
-        <input class="br" type="text" id="nome">
+        <input class="br" type="text" id="nome" onkeyup="validaNome()">
+        <div id="txtNome"></div>
         <br>
         <label for="email">E-mail:</label><br>
-        <input class="br" type="email" id="email">
+        <input class="br" type="email" id="email" onkeyup="validaEmail()">
+        <div id="txtEmail"></div>
         <br>
         <label for="assunto">Assunto:</label><br>
        <textarea class="br" name="assunto" id="assunto" cols="60" rows="5"></textarea>
+       <div id="txtAssunto"></div>
+        <br>
        <br>
        <br>
-    <button>Enviar</button>
+    <button onclick="enviar()">Enviar</button>
     </form>
 
      <h2>
@@ -40,7 +44,7 @@
      <p>Rua Vergueiro, 1308</p>
      <p>São Paulo, SP</p>
 
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.8524173856044!2d-46.64255958502195!3d-23.573743384676693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5999f334b57d%3A0x298226020ab091ed!2sRua%20Vergueiro%2C%201308%20-%20Liberdade%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001504-000!5e0!3m2!1spt-PT!2sbr!4v1603313167410!5m2!1spt-PT!2sbr" width="600" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.8524173856044!2d-46.64255958502195!3d-23.573743384676693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5999f334b57d%3A0x298226020ab091ed!2sRua%20Vergueiro%2C%201308%20-%20Liberdade%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001504-000!5e0!3m2!1spt-PT!2sbr!4v1603313167410!5m2!1spt-PT!2sbr" width="600" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id='mapa'></iframe>
      <hr>
      <footer>
          <div class="container">
@@ -60,5 +64,7 @@
              Todos os direitos reservados. &copy;
          </div>
      </footer>
+
+     <script src="assets/js/script.js"></script>
     </body>
 </html>
